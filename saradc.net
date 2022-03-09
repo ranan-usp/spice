@@ -31,6 +31,7 @@ XX1 N004 N001 N002 0 0 NC_01 N003 my_comparator
 V5 N001 0 1.8
 XX3 CLK N003 COMP_EN Q00 Q01 Q02 Q03 Q04 Q05 Sample SW0 SW0B SW1 SW1B SW2 SW2B SW3 SW3B SW4 SW4B SW5 SW5B sarlogic
 A2 COMP_EN 0 0 0 0 COMP_ENB 0 0 BUF
+B1 DOUT 0 V=32*V(Q05)+16*V(Q04)+8*V(Q03)+4*V(Q02)+2*V(Q01)+V(Q00)
 
 * block symbol definitions
 .subckt my_comparator CLK VDD VINN VINP VSS VOUTN VOUTP
@@ -144,5 +145,11 @@ A36 CLK 0 0 0 0 N029 0 0 BUF
 .tran 13u
 .model SW SW(Ron=0.1 Roff=1G Vt=0.5 Vh=-0.4)
 .meas tran reg1 find V(DOUT) AT=200n
+.meas tran q0 find V(Q00) AT = 200n
+.meas tran q1 find V(Q01) AT = 200n
+.meas tran q2 find V(Q02) AT = 200n
+.meas tran q3 find V(Q03) AT = 200n
+.meas tran q4 find V(Q04) AT = 200n
+.meas tran q5 find V(Q05) AT = 200n
 .backanno
 .end
