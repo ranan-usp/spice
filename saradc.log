@@ -1,0 +1,21 @@
+Circuit: * C:\Users\jpa55\Desktop\spice\saradc.asc
+
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Limiting fall time of source v3 to 2.51992e-021
+WARNING: Less than two connections to node Q05.  This node is used by A:X3:24.
+WARNING: Less than two connections to node Q04.  This node is used by A:X3:25.
+WARNING: Less than two connections to node Q03.  This node is used by A:X3:26.
+WARNING: Less than two connections to node Q02.  This node is used by A:X3:27.
+WARNING: Less than two connections to node Q01.  This node is used by A:X3:28.
+WARNING: Less than two connections to node Q00.  This node is used by A:X3:29.
+WARNING: Less than two connections to node X3:NOV.  This node is used by A:X3:11.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Direct Newton iteration for .op point succeeded.
+Heightened Def Con from 1.5e-011 ++++++++++++++++++++++++++++++++++++++++++++++++++Fatal Error: Analysis:  Time step too small; time = 1.5e-011, timestep = 1.25e-019: trouble with dflop-instance a:x3:8
+
