@@ -1,0 +1,24 @@
+Circuit: * C:\Users\circuit\spice\mySARLogic.asc
+
+WARNING: Less than two connections to node Q05.  This node is used by A24.
+WARNING: Less than two connections to node Q04.  This node is used by A25.
+WARNING: Less than two connections to node Q03.  This node is used by A26.
+WARNING: Less than two connections to node Q02.  This node is used by A27.
+WARNING: Less than two connections to node Q01.  This node is used by A28.
+WARNING: Less than two connections to node Q00.  This node is used by A29.
+WARNING: Less than two connections to node SW5B.  This node is used by A30.
+WARNING: Less than two connections to node SW5.  This node is used by A30.
+WARNING: Less than two connections to node N0V.  This node is used by A11.
+WARNING: Less than two connections to node SW4B.  This node is used by A31.
+WARNING: Less than two connections to node SW4.  This node is used by A31.
+WARNING: Less than two connections to node SW3B.  This node is used by A32.
+WARNING: Less than two connections to node SW3.  This node is used by A32.
+WARNING: Less than two connections to node SW2B.  This node is used by A33.
+WARNING: Less than two connections to node SW2.  This node is used by A33.
+WARNING: Less than two connections to node SW1B.  This node is used by A34.
+WARNING: Less than two connections to node SW1.  This node is used by A34.
+WARNING: Less than two connections to node SW0B.  This node is used by A35.
+WARNING: Less than two connections to node SW0.  This node is used by A35.
+Direct Newton iteration for .op point succeeded.
+Heightened Def Con from 1.5e-011 ++++++++++++++++++++++++++++++++++++++++++++++++++Fatal Error: Analysis:  Time step too small; time = 1.5e-011, timestep = 1.58691e-021: trouble with dflop-instance a7
+
