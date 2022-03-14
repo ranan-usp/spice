@@ -1,14 +1,7 @@
-Circuit: * C:\Users\jpa55\Desktop\spice\mySARLogic.asc
+Circuit: * C:\Users\jpa55\Desktop\spice\SARLogic.asc
 
-WARNING: Node CLK is floating.
 WARNING: Node COMP_IN is floating.
 
-WARNING: Less than two connections to node Q05.  This node is used by A24.
-WARNING: Less than two connections to node Q04.  This node is used by A25.
-WARNING: Less than two connections to node Q03.  This node is used by A26.
-WARNING: Less than two connections to node Q02.  This node is used by A27.
-WARNING: Less than two connections to node Q01.  This node is used by A28.
-WARNING: Less than two connections to node Q00.  This node is used by A29.
 WARNING: Less than two connections to node SW5B.  This node is used by A30.
 WARNING: Less than two connections to node SW5.  This node is used by A30.
 WARNING: Less than two connections to node N0V.  This node is used by A11.
@@ -22,22 +15,28 @@ WARNING: Less than two connections to node SW1B.  This node is used by A34.
 WARNING: Less than two connections to node SW1.  This node is used by A34.
 WARNING: Less than two connections to node SW0B.  This node is used by A35.
 WARNING: Less than two connections to node SW0.  This node is used by A35.
+WARNING: Less than two connections to node Q05.  This node is used by A24.
+WARNING: Less than two connections to node Q04.  This node is used by A25.
+WARNING: Less than two connections to node Q03.  This node is used by A26.
+WARNING: Less than two connections to node Q02.  This node is used by A27.
+WARNING: Less than two connections to node Q01.  This node is used by A28.
+WARNING: Less than two connections to node Q00.  This node is used by A29.
 Direct Newton iteration for .op point succeeded.
 
-Date: Thu Mar 10 20:59:41 2022
-Total elapsed time: 0.275 seconds.
+Date: Thu Mar 10 21:18:07 2022
+Total elapsed time: 1.536 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 2087
-traniter = 2082
-tranpoints = 1042
-accept = 1042
-rejected = 0
-matrix size = 60
+totiter = 212803
+traniter = 212798
+tranpoints = 101569
+accept = 77174
+rejected = 24395
+matrix size = 61
 fillins = 0
 solver = Normal
-Matrix Compiler1: 848 bytes object code size  0.2/0.1/[0.1]
-Matrix Compiler2: 2.30 KB object code size  0.2/0.4/[0.1]
+Matrix Compiler1: 880 bytes object code size  0.2/0.1/[0.1]
+Matrix Compiler2: 2.35 KB object code size  0.2/0.3/[0.1]
 

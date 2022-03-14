@@ -1,0 +1,10 @@
+.meas tran reg1 find V(DOUT) AT=200n
+.meas tran reg2 find V(DOUT) AT=300n
+.meas tran reg3 find V(DOUT) AT=400n
+.meas tran reg4 find V(DOUT) AT=500n
+.meas tran reg5 find V(DOUT) AT=600n
+.meas tran reg6 find V(DOUT) AT=700n
+.meas tran reg7 find V(DOUT) AT=800n
+.meas tran reg8 find V(DOUT) AT=900n
+.meas tran reg9 find V(DOUT) AT=1000n
+.meas tran reg10 find V(DOUT) AT=1100n
