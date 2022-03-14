@@ -1,8 +1,8 @@
-* C:\Users\circuit\spice\saradc.asc
+* C:\Users\jpa55\work\spice\saradc.asc
 C1 N031 N040 320f
 S1 N040 N041 SW5 0 SW
 S2 N040 0 SW5B 0 SW
-C2 N031 N039 160f
+C2 N031 N039 170f
 S3 N039 N041 SW4 0 SW
 S4 N039 0 SW4B 0 SW
 C3 N031 N038 80f
@@ -139,7 +139,7 @@ M15 N004 N002 VDD VDD CMOSP l={L15} w={W15} m={M15}
 
 .model NMOS NMOS
 .model PMOS PMOS
-.lib C:\Users\circuit\Documents\LTspiceXVII\lib\cmp\standard.mos
+.lib C:\Users\jpa55\Documents\LTspiceXVII\lib\cmp\standard.mos
 .tran 13u
 .model SW SW(Ron=0.1 Roff=1G Vt=.5 Vh=-.4)
 .meas tran reg1 find V(DOUT) AT=200n
