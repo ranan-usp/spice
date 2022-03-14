@@ -1,9 +1,10 @@
-Circuit: * C:\Users\jpa55\Desktop\spice\saradc.asc
+Circuit: * C:\Users\circuit\spice\saradc.asc
 
 Ignoring BSIM parameter XL
 Ignoring BSIM parameter XW
 Ignoring BSIM parameter XL
 Ignoring BSIM parameter XW
+Limiting fall time of source v3 to 2.51992e-021
 WARNING: Less than two connections to node DOUT.  This node is used by B1.
 WARNING: Less than two connections to node N0V.  This node is used by A27.
 Warning: Pd = 0 is less than W.
@@ -11,25 +12,23 @@ Warning: Ps = 0 is less than W.
 Warning: Pd = 0 is less than W.
 Warning: Ps = 0 is less than W.
 Direct Newton iteration for .op point succeeded.
+Heightened Def Con from 1.46658e-006 to 1.46658e-006
 
-reg1: v(dout)=0 at 2e-007
-
-
-Date: Sun Mar 13 16:16:02 2022
-Total elapsed time: 8.568 seconds.
+Date: Mon Mar 14 15:28:29 2022
+Total elapsed time: 5.747 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 556907
-traniter = 556878
-tranpoints = 191698
-accept = 141694
-rejected = 50004
+totiter = 71744
+traniter = 71715
+tranpoints = 24115
+accept = 17320
+rejected = 6796
 matrix size = 90
 fillins = 15
 solver = Normal
-Thread vector: 11.6/6.3[3] 3.7/2.4[3] 1.2/1.5[1] 0.2/1.1[1]  2592/500
-Matrix Compiler1: 4.06 KB object code size  0.7/0.4/[0.2]
-Matrix Compiler2: 5.74 KB object code size  0.4/0.6/[0.3]
+Thread vector: 17.4/14.1[2] 8.4/28.2[1] 1.2/2.7[1] 1.5/6.9[1]  2592/500
+Matrix Compiler1: 4.06 KB object code size  2.0/0.7/[0.4]
+Matrix Compiler2: off  [0.6]/1.2/0.9
 
