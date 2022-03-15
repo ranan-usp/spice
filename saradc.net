@@ -1,0 +1,154 @@
+* C:\Users\circuit\spice\saradc.asc
+C1 N031 N040 320f
+S1 N040 N041 SW5 0 SW
+S2 N040 0 SW5B 0 SW
+C2 N031 N039 160f
+S3 N039 N041 SW4 0 SW
+S4 N039 0 SW4B 0 SW
+C3 N031 N038 80f
+S5 N038 N041 SW3 0 SW
+S6 N038 0 SW3B 0 SW
+C4 N031 N037 40f
+S7 N037 N041 SW2 0 SW
+S8 N037 0 SW2B 0 SW
+C5 N031 N036 20f
+S9 N036 N041 SW1 0 SW
+S10 N036 0 SW1B 0 SW
+C6 N031 N035 10f
+S11 N035 N041 SW0 0 SW
+S12 N035 0 SW0B 0 SW
+C7 N031 N034 10f
+S13 N034 N041 Sample 0 SW
+S14 N034 0 COMP_ENB 0 SW
+S15 N041 N042 COMP_ENB 0 SW
+S16 N041 Vin Sample 0 SW
+V1 CLK 0 PULSE(0 {Vhigh} 0 30p 30p 5.555n 11.11n)
+V2 N042 0 {Vhigh}
+V3 Vin 0 SINE(0.5 0.5 500k 0 0 0 0)
+S17 0 N031 Sample 0 SW
+A1 CLK COMP_EN 0 0 0 N033 0 0 OR Trise={Trise} Td={Td} Vhigh={Vhigh}
+A2 COMP_EN 0 0 0 0 COMP_ENB 0 0 BUF Vt=.5 Vh=0.1 Trise={Trise} Vhigh={Vhigh}
+B1 DOUT 0 V=32*V(Q05)+16*V(Q04)+8*V(Q03)+4*V(Q02)+2*V(Q01)+V(Q00)
+A3 TIHI 0 CLK 0 CLR N013 N020 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A4 0 TIHI 0 N013 0 0 Sample 0 AND Trise={Trise} Td={Td} Vhigh={Vhigh}
+A5 Sample D6 N001 0 0 SW5B SW5 0 OR Trise={Trise} Td={Td} Vhigh={Vhigh}
+V4 TIHI 0 {Vhigh}
+A6 CLK 0 0 0 0 N028 0 0 BUF Trise={Trise} Vhigh={Vhigh}
+A7 N020 0 CLK 0 N027 COMP_EN N021 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A8 N021 0 CLK 0 CLR N014 N022 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A9 N022 0 CLK 0 CLR N015 N023 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A10 N023 0 CLK 0 CLR N016 N024 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A11 N024 0 CLK 0 CLR N017 N025 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A12 N025 0 CLK 0 CLR N018 N026 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A13 N026 0 CLK 0 CLR N019 N027 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A14 N027 0 N028 0 0 0 CLR 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A15 COMP_IN 0 N007 0 Sample 0 N001 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A16 COMP_IN 0 N008 0 Sample 0 N002 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A17 COMP_IN 0 N009 0 Sample 0 N003 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A18 COMP_IN 0 N010 0 Sample 0 N004 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A19 COMP_IN 0 N011 0 Sample 0 N005 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A20 COMP_IN 0 N012 0 Sample 0 N006 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A21 N001 0 CLR 0 0 0 Q05 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A22 N002 0 CLR 0 0 0 Q04 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A23 N003 0 CLR 0 0 0 Q03 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A24 N004 0 CLR 0 0 0 Q02 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A25 N005 0 CLR 0 0 0 Q01 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A26 N006 0 CLR 0 0 0 Q00 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A27 0 N020 0 COMP_EN 0 0 N0V 0 AND Trise={Trise} Td={Td} Vhigh={Vhigh}
+A28 0 N021 0 N014 0 N007 D6 0 AND Trise={Trise} Td={Td} Vhigh={Vhigh}
+A29 0 N022 0 N015 0 N008 D5 0 AND Trise={Trise} Td={Td} Vhigh={Vhigh}
+A30 0 N023 0 N016 0 N009 D4 0 AND Trise={Trise} Td={Td} Vhigh={Vhigh}
+A31 0 N024 0 N017 0 N010 D3 0 AND Trise={Trise} Td={Td} Vhigh={Vhigh}
+A32 0 N025 0 N018 0 N011 D2 0 AND Trise={Trise} Td={Td} Vhigh={Vhigh}
+A33 0 N026 0 N019 0 N012 D1 0 AND Trise={Trise} Td={Td} Vhigh={Vhigh}
+A34 Sample D5 N002 0 0 SW4B SW4 0 OR Trise={Trise} Td={Td} Vhigh={Vhigh}
+A35 Sample D4 N003 0 0 SW3B SW3 0 OR Trise={Trise} Td={Td} Vhigh={Vhigh}
+A36 Sample D3 N004 0 0 SW2B SW2 0 OR Trise={Trise} Td={Td} Vhigh={Vhigh}
+A37 Sample D2 N005 0 0 SW1B SW1 0 OR Trise={Trise} Td={Td} Vhigh={Vhigh}
+A38 Sample D1 N006 0 0 SW0B SW0 0 OR Trise={Trise} Td={Td} Vhigh={Vhigh}
+XX1 N033 N029 N032 N030 0 outn COMP_IN my_comparator
+V5 N029 0 1.8
+V6 N030 0 {common}
+V7 N032 N031 {common}
+
+* block symbol definitions
+.subckt my_comparator CLK VDD VINN VINP VSS VOUTN VOUTP
+M2 N002 VINN N005 VSS CMOSN l={L2} w={W2} m={M2}
+M3 N005 CLK VSS VSS CMOSN l={L3} w={W3} m={M3}
+M4 N001 CLK VDD VDD CMOSP l={L4} w={W4} m={M4}
+M5 N002 CLK VDD VDD CMOSP l={L5} w={W5} m={M5}
+M1 N001 VINP N005 VSS CMOSN l={L1} w={W1} m={M1}
+M6 VOUTP N001 VSS VSS CMOSN l={L6} w={W6} m={M6}
+M7 VOUTP VOUTN VSS VSS CMOSN l={L7} w={W7} m={M7}
+M8 N003 N001 VSS VSS CMOSN l={L8} w={W8} m={M8}
+M9 VOUTP VOUTN N003 VDD CMOSP l={L9} w={W9} m={M9}
+M10 N003 N001 VDD VDD CMOSP l={L10} w={W10} m={M10}
+M11 VOUTN N002 VSS VSS CMOSN l={L11} w={W11} m={M11}
+M12 VOUTN VOUTP VSS VSS CMOSN l={L12} w={W12} m={M12}
+M13 N004 N002 VSS VSS CMOSN l={L13} w={W13} m={M13}
+M14 VOUTN VOUTP N004 VDD CMOSP l={L14} w={W14} m={M14}
+M15 N004 N002 VDD VDD CMOSP l={L15} w={W15} m={M15}
+.param L = 0.18u
+.param L1 = L
+.param W1 = L1*10
+.param M1 = 1
+.param L2 = L
+.param W2 = L2*10
+.param M2 = 1
+.param L3 = L
+.param W3 = L3*10
+.param M3 = 1
+.param L4 = L
+.param W4 = L4*10
+.param M4 = 1
+.param L5 = L
+.param W5 = L5*10
+.param M5 = 1
+.param L6 = L
+.param W6 = L6*10
+.param M6 = 1
+.param L7 = L
+.param W7 = L7*10
+.param M7 = 1
+.param L8 = L
+.param W8 = L8*10
+.param M8 = 1
+.param L9 = L
+.param W9 = L9*10
+.param M9 = 1
+.param L10 = L
+.param W10 = L10*10
+.param M10 = 1
+.param L11 = L
+.param W11 = L11*10
+.param M11 = 1
+.param L12 = L
+.param W12 = L12*10
+.param M12 = 1
+.param L13 = L
+.param W13 = L13*10
+.param M13 = 1
+.param L14 = L
+.param W14 = L14*10
+.param M14 = 1
+.param L15 = L
+.param W15 = L15*10
+.param M15 = 1
+.include tsmc018.mdl
+.ends my_comparator
+
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\circuit\Documents\LTspiceXVII\lib\cmp\standard.mos
+.tran 13u
+.model SW SW(Ron=0.1 Roff=1G Vt=.5 Vh=-.4)
+.meas tran reg1 find V(DOUT) AT=200n
+.param Trise=30p
+.param Td=Trise
+.param Vhigh=1
+.param Vlow=0
+*PULSE(0 {Vhigh} 0 12.8u 0 0.2u 13u)
+.param common = 0.9
+*SINE(0.5 0.5 500k 0 0 0 0)
+.backanno
+.end
