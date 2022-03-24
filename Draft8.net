@@ -1,0 +1,105 @@
+* C:\Users\jpa55\work\spice\Draft8.asc
+M1 P001 N053 N057 N050 CMOSN l=0.18u w=1.8u m=1
+M2 N062 N070 N075 N064 CMOSN l=0.18u w=1.8u m=1
+M3 N023 N013 N007 N015 CMOSP l=0.18u w=1.8u m=1
+M4 N024 N014 N008 N016 CMOSP l=0.18u w=1.8u m=1
+M5 N046 N052 N055 N048 CMOSN l=0.18u w=1.8u m=1
+M6 N058 N071 N076 N066 CMOSN l=0.18u w=1.8u m=1
+M7 N063 N072 N077 N067 CMOSN l=0.18u w=1.8u m=1
+M8 N019 N034 N038 N027 CMOSN l=0.18u w=1.8u m=1
+M9 P002 N031 N028 N025 CMOSP l=0.18u w=1.8u m=1
+M10 N017 N004 N001 N009 CMOSP l=0.18u w=1.8u m=1
+M11 N061 N074 N079 N069 CMOSN l=0.18u w=1.8u m=1
+M12 P003 N073 N078 N068 CMOSN l=0.18u w=1.8u m=1
+M13 N022 N035 N040 N030 CMOSN l=0.18u w=1.8u m=1
+M14 N045 N033 N029 N026 CMOSP l=0.18u w=1.8u m=1
+M15 N018 N005 N002 N012 CMOSP l=0.18u w=1.8u m=1
+XX1 VDD N007 para_register
+XX2 VDD N015 para_register
+XX3 VDD N016 para_register
+XX4 VDD N008 para_register
+XX5 N013 CLK para_register
+XX6 CLK N014 para_register
+XX7 N036 N023 para_register
+XX8 N041 N024 para_register
+XX9 N046 N036 para_register
+XX10 N042 N041 para_register
+XX11 P001 N042 para_register
+XX12 VINP N052 para_register
+XX13 N048 N049 para_register
+XX14 N049 N050 para_register
+XX15 N053 VINN para_register
+XX16 N056 N055 para_register
+XX17 N057 N056 para_register
+XX18 N062 N056 para_register
+XX19 N065 N049 para_register
+XX20 CLK N070 para_register
+XX21 N065 N064 para_register
+XX22 VSS N075 para_register
+XX23 VSS N065 para_register
+XX24 N036 N037 para_register
+XX25 N042 N039 para_register
+XX26 VDD N001 para_register
+XX27 VDD N010 para_register
+XX28 VDD N011 para_register
+XX29 VDD N002 para_register
+XX30 N004 N003 para_register
+XX31 N010 N009 para_register
+XX32 N012 N011 para_register
+XX33 N006 N005 para_register
+XX34 N020 N017 para_register
+XX35 N025 N010 para_register
+XX36 N026 N011 para_register
+XX37 N021 N018 para_register
+XX38 N019 N020 para_register
+XX39 N021 N022 para_register
+XX40 N003 N034 para_register
+XX41 N027 VSS para_register
+XX42 N038 VSS para_register
+XX43 N028 N020 para_register
+XX44 N031 N032 para_register
+XX45 N035 N006 para_register
+XX46 VSS N030 para_register
+XX47 VSS N040 para_register
+XX48 N029 N021 para_register
+XX49 N044 N033 para_register
+XX50 N037 N003 para_register
+XX51 N039 N006 para_register
+XX52 N071 N037 para_register
+XX53 N043 P002 para_register
+XX54 N047 N045 para_register
+XX55 N074 N039 para_register
+XX56 N051 N043 para_register
+XX57 N073 N044 para_register
+XX58 VOUTP N051 para_register
+XX59 N051 N059 para_register
+XX60 N054 VOUTN para_register
+XX61 N047 N054 para_register
+XX62 N043 N044 para_register
+XX63 N032 N047 para_register
+XX64 N032 N072 para_register
+XX65 N058 N059 para_register
+XX66 N060 N061 para_register
+XX67 N054 N060 para_register
+XX68 N059 N063 para_register
+XX69 N060 P003 para_register
+XX70 N076 VSS para_register
+XX71 N066 VSS para_register
+XX72 N067 VSS para_register
+XX73 N077 VSS para_register
+XX74 N078 VSS para_register
+XX75 N068 VSS para_register
+XX76 N069 VSS para_register
+XX77 N079 VSS para_register
+
+* block symbol definitions
+.subckt para_register  
+R1 out in 0.01
+.ends para_register
+
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\jpa55\Documents\LTspiceXVII\lib\cmp\standard.mos
+.include tsmc018.mdl
+.backanno
+.end

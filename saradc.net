@@ -1,4 +1,4 @@
-* C:\Users\circuit\spice\saradc.asc
+* C:\Users\jpa55\work\spice\saradc.asc
 C1 N031 N040 320f
 S1 N040 N041 SW5 0 SW
 S2 N040 0 SW5B 0 SW
@@ -139,13 +139,13 @@ M15 N004 N002 VDD VDD CMOSP l={L15} w={W15} m={M15}
 
 .model NMOS NMOS
 .model PMOS PMOS
-.lib C:\Users\circuit\Documents\LTspiceXVII\lib\cmp\standard.mos
+.lib C:\Users\jpa55\Documents\LTspiceXVII\lib\cmp\standard.mos
 .tran 13u
 .model SW SW(Ron=0.1 Roff=1G Vt=.5 Vh=-.4)
 .meas tran reg1 find V(DOUT) AT=200n
 .param Trise=30p
 .param Td=Trise
-.param Vhigh=1
+.param Vhigh=1.8
 .param Vlow=0
 *PULSE(0 {Vhigh} 0 12.8u 0 0.2u 13u)
 .param common = 0.9
