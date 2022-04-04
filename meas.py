@@ -63,10 +63,8 @@ print(result)
 ptf = (2**resolution)/Vref
 y_ptf = ptf*np.array(analog_input)
 
-# print(output_code)
-
-fig = plt.figure(figsize=(12,10))
-plt.plot(analog_input,output_code,label = "actual transform function")
+fig = plt.figure(figsize=(8,8))
+plt.plot((np.array(analog_input)-(result[0]-result[1])).tolist(),output_code,label = "actual transform function")
 plt.plot(analog_input,y_ptf,label = "perfect transform function")
 plt.xlim(0,1)
 plt.ylim(0,64)
@@ -74,5 +72,3 @@ plt.xlabel('analog input',{"fontsize":18})
 plt.ylabel('output code',{"fontsize":18})
 plt.legend(prop={"size": 16})
 plt.show()
-
-    
