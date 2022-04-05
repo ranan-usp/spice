@@ -1,4 +1,4 @@
-Circuit: * C:\Users\jpa55\work\spice\tb_my_comparator.asc
+Circuit: * C:\Users\circuit\spice\tb_my_comparator.asc
 
 Ignoring BSIM parameter XL
 Ignoring BSIM parameter XW
@@ -9,48 +9,24 @@ Warning: Ps = 0 is less than W.
 Warning: Pd = 0 is less than W.
 Warning: Ps = 0 is less than W.
 Direct Newton iteration for .op point succeeded.
-.step vin=0.0001
-.step vin=0.000158489
-.step vin=0.000251189
-.step vin=0.000398107
-.step vin=0.000630957
-.step vin=0.001
-.step vin=0.00158489
-.step vin=0.00251189
-.step vin=0.00398107
-.step vin=0.00630957
-.step vin=0.01
+
+tl: v(voutp)=1.72 AT 1.58266e-009
 
 
-Measurement: tl
-  step	v(voutp)=1.72
-     1	1.71282e-009
-     2	1.69723e-009
-     3	1.68348e-009
-     4	1.66728e-009
-     5	1.65218e-009
-     6	1.63707e-009
-     7	1.61994e-009
-     8	1.60433e-009
-     9	1.58777e-009
-    10	1.57426e-009
-    11	1.55877e-009
-
-
-Date: Fri Mar 25 10:56:04 2022
-Total elapsed time: 0.782 seconds.
+Date: Tue Apr 05 15:57:51 2022
+Total elapsed time: 0.557 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 2962
-traniter = 2940
-tranpoints = 1273
-accept = 1198
-rejected = 75
+totiter = 2955
+traniter = 2933
+tranpoints = 1267
+accept = 1190
+rejected = 77
 matrix size = 17
 fillins = 6
 solver = Normal
-Matrix Compiler1: 1.45 KB object code size  0.3/0.1/[0.1]
-Matrix Compiler2: 1.75 KB object code size  0.1/0.2/[0.1]
+Matrix Compiler1: 1.45 KB object code size  0.4/0.4/[0.2]
+Matrix Compiler2: 1.75 KB object code size  0.2/0.4/[0.2]
 

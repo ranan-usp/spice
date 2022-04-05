@@ -1,0 +1,149 @@
+* C:\Users\circuit\spice\Draft6.asc
+M3 N021 N013 N007 N015 CMOSP l=0.18u w=1.8u m=1
+M8 N017 N033 N037 N025 CMOSN l=0.18u w=1.8u m=1
+M4 N022 N014 N008 N016 CMOSP l=0.18u w=1.8u m=1
+M9 P001 N005 N002 N012 CMOSP l=0.18u w=1.8u m=1
+M10 P002 N004 N001 N009 CMOSP l=0.18u w=1.8u m=1
+M14 N042 N032 N027 N024 CMOSP l=0.18u w=1.8u m=1
+M15 N041 N029 N026 N023 CMOSP l=0.18u w=1.8u m=1
+M1 N020 N034 N038 N028 CMOSN l=0.18u w=1.8u m=1
+M2 N058 N069 N074 N064 CMOSN l=0.18u w=1.8u m=1
+M5 P003 N068 N073 N063 CMOSN l=0.18u w=1.8u m=1
+M6 N056 N066 N071 N061 CMOSN l=0.18u w=1.8u m=1
+M7 P004 N067 N072 N062 CMOSN l=0.18u w=1.8u m=1
+M11 P005 N051 N059 N048 CMOSN l=0.18u w=1.8u m=1
+M12 N043 N050 N053 N046 CMOSN l=0.18u w=1.8u m=1
+M13 N054 N065 N070 P006 CMOSN l=0.18u w=1.8u m=1
+XX1 VDD N007 para_register
+XX2 VDD N015 para_register
+XX3 VDD N016 para_register
+XX4 VDD N008 para_register
+XX5 N013 CLK para_register
+XX6 CLK N014 para_register
+XX7 N021 N035 para_register
+XX8 N022 N039 para_register
+XX9 N035 N043 para_register
+XX10 N039 P005 para_register
+XX11 N050 VINP para_register
+XX12 N047 N046 para_register
+XX13 N048 N047 para_register
+XX14 VINN N051 para_register
+XX15 N054 N053 para_register
+XX16 N065 CLK para_register
+XX17 N047 N060 para_register
+XX18 N059 VSS para_register
+XX19 N060 P006 para_register
+XX20 N060 VSS para_register
+XX21 N036 N035 para_register
+XX22 N040 N039 para_register
+XX23 VDD N001 para_register
+XX24 VDD N010 para_register
+XX25 VDD N011 para_register
+XX26 VDD N002 para_register
+XX27 N003 N004 para_register
+XX28 N009 N010 para_register
+XX29 N011 N012 para_register
+XX30 N005 N006 para_register
+XX31 N003 N033 para_register
+XX32 N017 N018 para_register
+XX33 P002 N018 para_register
+XX34 N018 N026 para_register
+XX35 N023 N010 para_register
+XX36 N011 N024 para_register
+XX37 P001 N019 para_register
+XX38 N019 N027 para_register
+XX39 N019 N020 para_register
+XX40 N034 N006 para_register
+XX41 N025 VSS para_register
+XX42 N037 VSS para_register
+XX43 VSS N028 para_register
+XX44 VSS N038 para_register
+XX45 N029 N030 para_register
+XX46 N031 N032 para_register
+XX47 N036 N066 para_register
+XX48 N041 N045 para_register
+XX49 N045 N052 para_register
+XX50 N052 N057 para_register
+XX51 N031 N045 para_register
+XX52 VOUTP N052 para_register
+XX53 N056 N057 para_register
+XX54 N067 N030 para_register
+XX55 N071 VSS para_register
+XX56 N061 VSS para_register
+XX57 N062 VSS para_register
+XX58 N072 VSS para_register
+XX59 N057 P004 para_register
+XX60 N003 N036 para_register
+XX61 N030 N044 para_register
+XX62 N042 N044 para_register
+XX63 N006 N040 para_register
+XX64 N031 N068 para_register
+XX65 N044 N049 para_register
+XX66 N049 N055 para_register
+XX67 N055 P003 para_register
+XX68 N055 N058 para_register
+XX69 N040 N069 para_register
+XX70 N049 VOUTN para_register
+XX71 N073 VSS para_register
+XX72 N063 VSS para_register
+XX73 N064 VSS para_register
+XX74 N074 VSS para_register
+XX75 N070 VSS para_register
+
+* block symbol definitions
+.subckt para_register in out
+R1 out in 0.01
+.ends para_register
+
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\circuit\Documents\LTspiceXVII\lib\cmp\standard.mos
+.param L = 0.18u
+.param L1 = L
+.param W1 = L1*10
+.param M1 = 1
+.param L2 = L
+.param W2 = L2*10
+.param M2 = 1
+.param L3 = L
+.param W3 = L3*10
+.param M3 = 1
+.param L4 = L
+.param W4 = L4*10
+.param M4 = 1
+.param L5 = L
+.param W5 = L5*10
+.param M5 = 1
+.param L6 = L
+.param W6 = L6*10
+.param M6 = 1
+.param L7 = L
+.param W7 = L7*10
+.param M7 = 1
+.param L8 = L
+.param W8 = L8*10
+.param M8 = 1
+.param L9 = L
+.param W9 = L9*10
+.param M9 = 1
+.param L10 = L
+.param W10 = L10*10
+.param M10 = 1
+.param L11 = L
+.param W11 = L11*10
+.param M11 = 1
+.param L12 = L
+.param W12 = L12*10
+.param M12 = 1
+.param L13 = L
+.param W13 = L13*10
+.param M13 = 1
+.param L14 = L
+.param W14 = L14*10
+.param M14 = 1
+.param L15 = L
+.param W15 = L15*10
+.param M15 = 1
+.include tsmc018.mdl
+.backanno
+.end

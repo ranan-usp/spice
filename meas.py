@@ -36,7 +36,7 @@ with open(out_path,'r') as f:
     s = f.read()
 lines = s.split("\n")
 for line in lines:
-
+    
     words = line.split()
 
     if not (len(words) > 2):
@@ -62,6 +62,15 @@ print(result)
 
 ptf = (2**resolution)/Vref
 y_ptf = ptf*np.array(analog_input)
+
+
+with open('trans_memo.txt','w') as f:
+    for index in range(len(analog_input)):
+        insert_text = str(analog_input[index]) + ' ' + str(output_code[index]) + ' ' + str(y_ptf[index])
+        f.write(insert_text)
+        f.write('\n')
+
+    
 
 fig = plt.figure(figsize=(8,8))
 plt.plot((np.array(analog_input)-(result[0]-result[1])).tolist(),output_code,label = "actual transform function")
