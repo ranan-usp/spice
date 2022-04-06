@@ -1,0 +1,51 @@
+Circuit: * C:\Users\jpa55\work\spice\saradc.asc
+
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+WARNING: Less than two connections to node DOUT.  This node is used by B1.
+WARNING: Less than two connections to node N0V.  This node is used by A27.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Direct Newton iteration for .op point succeeded.
+Heightened Def Con from 1.2221e-005 to 1.22212e-005
+Heightened Def Con from 2.85083e-005 to 2.85083e-005
+N-Period=all
+Fourier components of V(vin)
+DC component:0.5
+
+Harmonic	Frequency	 Fourier 	Normalized	 Phase  	Normalized
+ Number 	  [Hz]   	Component	 Component	[degree]	Phase [deg]
+    1   	5.018e+05	5.000e-01	1.000e+00	    0.00°	    0.00°
+    2   	1.004e+06	1.268e-09	2.536e-09	 -105.72°	 -105.72°
+    3   	1.505e+06	3.606e-10	7.212e-10	    5.03°	    5.03°
+    4   	2.007e+06	6.132e-10	1.226e-09	   60.10°	   60.10°
+    5   	2.509e+06	3.308e-10	6.616e-10	  -25.89°	  -25.89°
+Total Harmonic Distortion: 0.000000%(0.000000%)
+
+
+
+reg1: v(dout)=0.666667 at 2e-007
+
+
+Date: Wed Apr 06 23:21:50 2022
+Total elapsed time: 83.638 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 4329290
+traniter = 4329261
+tranpoints = 1447086
+accept = 1029719
+rejected = 417369
+matrix size = 90
+fillins = 15
+solver = Normal
+Thread vector: 12.0/6.4[3] 6.9/2.5[3] 2.3/1.7[3] 0.2/6.3[1]  2592/500
+Matrix Compiler1: 4.06 KB object code size  1.3/0.9/[0.3]
+Matrix Compiler2: 5.74 KB object code size  1.0/1.5/[0.4]
+

@@ -1,0 +1,68 @@
+* C:\Users\jpa55\work\spice\my_comparator.asc
+M2 N002 VINN N005 VSS CMOSN l={L2} w={W2} m={M2}
+M3 N005 CLK VSS VSS CMOSN l={L3} w={W3} m={M3}
+M4 N001 CLK VDD VDD CMOSP l={L4} w={W4} m={M4}
+M5 N002 CLK VDD VDD CMOSP l={L5} w={W5} m={M5}
+M1 N001 VINP N005 VSS CMOSN l={L1} w={W1} m={M1}
+M6 VOUTP N001 VSS VSS CMOSN l={L6} w={W6} m={M6}
+M7 VOUTP VOUTN VSS VSS CMOSN l={L7} w={W7} m={M7}
+M8 N003 N001 VSS VSS CMOSN l={L8} w={W8} m={M8}
+M9 VOUTP VOUTN N003 VDD CMOSP l={L9} w={W9} m={M9}
+M10 N003 N001 VDD VDD CMOSP l={L10} w={W10} m={M10}
+M11 VOUTN N002 VSS VSS CMOSN l={L11} w={W11} m={M11}
+M12 VOUTN VOUTP VSS VSS CMOSN l={L12} w={W12} m={M12}
+M13 N004 N002 VSS VSS CMOSN l={L13} w={W13} m={M13}
+M14 VOUTN VOUTP N004 VDD CMOSP l={L14} w={W14} m={M14}
+M15 N004 N002 VDD VDD CMOSP l={L15} w={W15} m={M15}
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\jpa55\Documents\LTspiceXVII\lib\cmp\standard.mos
+.param L = 0.18u
+.param L1 = L
+.param W1 = L1*10
+.param M1 = 1
+.param L2 = L
+.param W2 = L2*10
+.param M2 = 1
+.param L3 = L
+.param W3 = L3*10
+.param M3 = 1
+.param L4 = L
+.param W4 = L4*10
+.param M4 = 1
+.param L5 = L
+.param W5 = L5*10
+.param M5 = 1
+.param L6 = L
+.param W6 = L6*10
+.param M6 = 1
+.param L7 = L
+.param W7 = L7*10
+.param M7 = 1
+.param L8 = L
+.param W8 = L8*10
+.param M8 = 1
+.param L9 = L
+.param W9 = L9*10
+.param M9 = 1
+.param L10 = L
+.param W10 = L10*10
+.param M10 = 1
+.param L11 = L
+.param W11 = L11*10
+.param M11 = 1
+.param L12 = L
+.param W12 = L12*10
+.param M12 = 1
+.param L13 = L
+.param W13 = L13*10
+.param M13 = 1
+.param L14 = L
+.param W14 = L14*10
+.param M14 = 1
+.param L15 = L
+.param W15 = L15*10
+.param M15 = 1
+.include tsmc018.mdl
+.backanno
+.end
