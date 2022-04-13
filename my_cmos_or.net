@@ -1,0 +1,12 @@
+* C:\Users\circuit\spice\my_cmos_or.asc
+M1 Q_BAR B VSS VSS NMOS l=0.18u w=1.8u m=1
+M2 Q_BAR A VSS VSS NMOS l=0.18u w=1.8u m=1
+M3 Q_BAR B N001 VDD PMOS l=0.18u w=1.8u m=1
+M4 N001 A VDD VDD PMOS l=0.18u w=1.8u m=1
+M5 Q Q_BAR VSS VSS NMOS l=0.18u w=1.8u m=1
+M6 Q Q_BAR VDD VDD PMOS l=0.18u w=1.8u m=1
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\circuit\Documents\LTspiceXVII\lib\cmp\standard.mos
+.backanno
+.end

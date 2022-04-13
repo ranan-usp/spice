@@ -1,0 +1,16 @@
+* C:\Users\circuit\spice\test_cmos_or.asc
+V1 VDD 0 1.8
+V2 A 0 PULSE(0 1.8 1n 60p 60p 5n 10n)
+V3 B 0 PULSE(0 1.8 10n 60p 60p 5n 10n)
+M1 Q_BAR B 0 0 NMOS l=0.18u w=1.8u m=1
+M2 Q_BAR A 0 0 NMOS l=0.18u w=1.8u m=1
+M3 Q_BAR B N001 VDD PMOS l=0.18u w=1.8u m=1
+M4 N001 A VDD VDD PMOS l=0.18u w=1.8u m=1
+M5 Q Q_BAR 0 0 NMOS l=0.18u w=1.8u m=1
+M6 Q Q_BAR VDD VDD PMOS l=0.18u w=1.8u m=1
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\circuit\Documents\LTspiceXVII\lib\cmp\standard.mos
+.tran 40n
+.backanno
+.end
