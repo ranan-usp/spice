@@ -1,0 +1,58 @@
+Circuit: * C:\Users\circuit\spice\Draft11.asc
+
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Limiting fall time of source vin1 to 1.90582e-022
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Instance "m:x3:6": Length shorter than recommended for a level 1 MOSFET.
+Instance "m:x3:6": Width narrower than recommended for a level 1 MOSFET.
+Instance "m:x3:4": Length shorter than recommended for a level 1 MOSFET.
+Instance "m:x3:4": Width narrower than recommended for a level 1 MOSFET.
+Instance "m:x3:3": Length shorter than recommended for a level 1 MOSFET.
+Instance "m:x3:3": Width narrower than recommended for a level 1 MOSFET.
+Instance "m:x2:6": Length shorter than recommended for a level 1 MOSFET.
+Instance "m:x2:6": Width narrower than recommended for a level 1 MOSFET.
+Instance "m:x2:4": Length shorter than recommended for a level 1 MOSFET.
+Instance "m:x2:4": Width narrower than recommended for a level 1 MOSFET.
+Instance "m:x2:3": Length shorter than recommended for a level 1 MOSFET.
+Instance "m:x2:3": Width narrower than recommended for a level 1 MOSFET.
+Instance "m:x3:5": Length shorter than recommended for a level 1 MOSFET.
+Instance "m:x3:5": Width narrower than recommended for a level 1 MOSFET.
+Instance "m:x3:2": Length shorter than recommended for a level 1 MOSFET.
+Instance "m:x3:2": Width narrower than recommended for a level 1 MOSFET.
+Instance "m:x3:1": Length shorter than recommended for a level 1 MOSFET.
+Instance "m:x3:1": Width narrower than recommended for a level 1 MOSFET.
+Instance "m:x2:5": Length shorter than recommended for a level 1 MOSFET.
+Instance "m:x2:5": Width narrower than recommended for a level 1 MOSFET.
+Instance "m:x2:2": Length shorter than recommended for a level 1 MOSFET.
+Instance "m:x2:2": Width narrower than recommended for a level 1 MOSFET.
+Instance "m:x2:1": Length shorter than recommended for a level 1 MOSFET.
+Instance "m:x2:1": Width narrower than recommended for a level 1 MOSFET.
+Direct Newton iteration for .op point succeeded.
+
+
+Measurement "offset" FAIL'ed
+
+
+Date: Tue Apr 19 15:35:28 2022
+Total elapsed time: 1.210 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 39870
+traniter = 39848
+tranpoints = 14375
+accept = 10827
+rejected = 3548
+matrix size = 24
+fillins = 10
+solver = Normal
+Matrix Compiler1: 3.26 KB object code size  0.7/0.5/[0.3]
+Matrix Compiler2: 2.71 KB object code size  0.3/0.4/[0.3]
+
