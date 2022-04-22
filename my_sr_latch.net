@@ -1,0 +1,19 @@
+* C:\Users\circuit\spice\my_sr_latch.asc
+XX1 S Q VDD 0 NC_01 Q_BAR my_cmos_or
+XX2 Q_BAR R VDD 0 NC_02 Q my_cmos_or
+
+* block symbol definitions
+.subckt my_cmos_or A B VDD VSS Q Q_BAR
+M1 Q_BAR B VSS VSS CMOSN l=0.18u w=1.8u m=1
+M2 Q_BAR A VSS VSS CMOSN l=0.18u w=1.8u m=1
+M3 Q_BAR B N001 VDD CMOSP l=0.18u w=1.8u m=1
+M4 N001 A VDD VDD CMOSP l=0.18u w=1.8u m=1
+M5 Q Q_BAR VSS VSS CMOSN l=0.18u w=1.8u m=1
+M6 Q Q_BAR VDD VDD CMOSP l=0.18u w=1.8u m=1
+.ends my_cmos_or
+
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\circuit\Documents\LTspiceXVII\lib\cmp\standard.mos
+.backanno
+.end
