@@ -8,7 +8,7 @@ module dff_test;
 
     //2. Instantiate the module we want to test. We have instantiated the srff_behavior
 
-    srff_behavior dut(.q(Q), .qbar(QBAR), .s(S), .r(R), .clk(CLK)); // instantiation by port name.
+    srff_behav ior dut(.q(Q), .qbar(QBAR), .s(S), .r(R), .clk(CLK)); // instantiation by port name.
 
     //3. Monitor TB ports
     $monitor("simtime = %g, CLK = %b, S = %b, R = %b, Q = %b, QBAR = %b", $time, CLK, S, R, Q, QBAR);
