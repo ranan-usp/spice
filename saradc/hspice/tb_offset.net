@@ -1,0 +1,36 @@
+
+* test_comparaotr
+*ZZ****INV_K
+.options post=1 ingold=2 numdgt=7 list nomod nopage
+*excel_version
+*.options post=0 ingold=2 numdgt=7 list nomod nopage
+.include "option.net"
+.OPTION  accurate
+.option dcstep=1
+.option GSHUNT=1E-12
+.op
+.TEMP 27
+.save
+**********************************************************
+
+.INCLUDE comp_out.net
+.HDL srflipflop
+
+
+V1 N003 0 PULSE(0 1.8 1n 60p 60p 5n 10n)
+VIN1 VINP N002 PULSE(-25m 25m 0 1000n 0 0 1000n)
+V2 N002 0 0.9
+V3 N001 0 1.8
+E1 VINN N002 VINP N002 -1
+C1 VOP 0 10f
+C2 VON 0 10f
+XX1 N003 N001 VINN VINP 0 VON VOP my_comparator
+XX2 VON VOP N003 VOUTN VOUTP N001 0 VerilogA_SRlipFlop
+
+.ic V(VOP)=0 V(VON)=1.8
+
+.tran 1n 1000n
+.print V(VINP) V(VINN) V(VOUTP) V(VOUTN)
+.meas offset find V(VINP,VINN) when V(VOUTP)=0.9
+
+.END

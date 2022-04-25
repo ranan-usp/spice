@@ -1,0 +1,13 @@
+Version 4
+SymbolType BLOCK
+CIRCLE Normal 57 50 -24 -32
+WINDOW 0 80 32 Bottom 2
+PIN -16 32 LEFT 8
+PINATTR PinName clk
+PINATTR SpiceOrder 1
+PIN 16 48 LEFT 8
+PINATTR PinName in
+PINATTR SpiceOrder 2
+PIN 16 -32 RIGHT 8
+PINATTR PinName out
+PINATTR SpiceOrder 3
