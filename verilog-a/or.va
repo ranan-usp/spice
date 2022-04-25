@@ -2,7 +2,7 @@
 `include "constants.vams"
 `include "disciplines.vams"
 
-module VerilogA_AND(A,B,C,X,XB);
+module VerilogA_OR(A,B,C,X,XB);
 
 parameter real vtrans=0.5;
 parameter real delay = 0;
