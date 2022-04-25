@@ -1,33 +1,44 @@
 // VerilogA for SAR_VerilogA, VerilogA_D_FlipFlop, veriloga
+
 `include "constants.vams"
 `include "disciplines.vams"
 
-module VerilogA_DFlipFlop(SB,RB,clk,Q,Qb,vdd,vss);
+module VerilogA_SRlipFlop(RB,SB,Q,Qb,vdd,vss);
 
 parameter real vtrans=0.5;
 parameter real delay = 0;
 parameter real ttime = 1p;
-parameter real clk_threshold = 0.5;
+parameter real clk_threshold = 0.9;
 
 inout vdd,vss;
-input SB,RB;
+input RB,SB;
 output Q,Qb;
 
-electrical SB,RB,Q,Qb,vdd,vss;
+electrical RB,SB,Q,Qb,vdd,vss;
 real d_0,d_0b;
 
 analog begin
 
- @(cross(V(clk) - clk_threshold, +1))
- begin
-    if(V(RB) == 0) begin
-    d_0 = 0; d_0b = 1; end
- else if(V(SB) == 0) begin
-    d_0 = 1; d_0b = 0; end
- end
+   // if((V(RB) < clk_threshold) && (V(SB) > clk_threshold)) begin
+      // d_0 = V(vdd); d_0b = V(vss); end
+   // else if((V(RB) > clk_threshold) && (V(SB) < clk_threshold)) begin
+      // d_0 = V(vss); d_0b = V(vdd); end
+   // else if((V(RB) < clk_threshold) && (V(SB) < clk_threshold)) begin
+      // d_0 = d_0; d_0b = d_0b; end
 
- V(Q) <+ transition(d_0,delay,ttime);
- V(Qb) <+ transition(d_0b,delay,ttime);
+   
+   // $strobe("clk = %d RB = %d SB = %d",V(clk),V(RB),V(SB)) ;
+   if((V(RB) < clk_threshold) && (V(SB) < clk_threshold)) begin
+      d_0 = d_0; d_0b = d_0b; end
+   else if(V(RB) > clk_threshold) begin
+      d_0 = V(vss); d_0b = V(vdd); end
+   else if(V(SB) > clk_threshold) begin
+      d_0 = V(vdd); d_0b = V(vss); end
+   
+   V(Q) <+ transition(d_0,delay,ttime);
+   V(Qb) <+ transition(d_0b,delay,ttime);
+   
+
 end
 
 endmodule

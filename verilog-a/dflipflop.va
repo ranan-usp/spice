@@ -4,10 +4,10 @@
 
 module VerilogA_DFlipFlop(D,clk,Q,Qb,set,reset,vdd,vss);
 
-parameter real vtrans=0.5;
+parameter real vtrans=0.9;
 parameter real delay = 0;
 parameter real ttime = 1p;
-parameter real clk_threshold = 0.5;
+parameter real clk_threshold = 0.9;
 
 inout vdd,vss;
 input D,clk,set,reset;

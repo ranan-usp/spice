@@ -2,23 +2,23 @@
 `include "constants.vams"
 `include "disciplines.vams"
 
-module VerilogA_AND(A,B,X,XB);
+module VerilogA_AND(A,B,C,X,XB);
 
 parameter real vtrans=0.5;
 parameter real delay = 0;
 parameter real ttime = 1p;
 parameter real clk_threshold = 0.5;
 
-input A,B;
+input A,B,C;
 output X,XB;
 
-electrical A,B,X,XB;
+electrical A,B,C,X,XB;
 
 real X_out,XB_out;
 
 analog begin
 
- if((V(A) < vtrans) && (V(B) < vtrans)) begin
+ if((V(A) < vtrans) && (V(B) < vtrans) && (V(C) < vtrans)) begin
     X_out = 0;
     XB_out = 1; end
     
