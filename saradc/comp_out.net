@@ -2879,6 +2879,8 @@ C_0_n008_3_comp n008_3_comp 0 0.1614761f
 C_0_n008_4_comp n008_4_comp 0 0.2183693f 
 XX76 N021 N029 para_register 
 
+
+
 * block symbol definitions 
 .subckt para_register in out 
 R1 out in 0.00001 

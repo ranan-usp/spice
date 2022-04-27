@@ -1,6 +1,6 @@
 * C:\Users\jpa55\work\spice\saradc\saradc.asc
 
-.include "my_comp.net"
+.include "comp_out.net"
 
 
 C1 N004 N014 320f
@@ -79,15 +79,11 @@ A34 Sample D2 N005 0 0 SW1B SW1 0 OR Trise={Trise} Td={Td} Vhigh={Vhigh}
 A35 Sample D1 N006 0 0 SW0B SW0 0 OR Trise={Trise} Td={Td} Vhigh={Vhigh}
 .ends mysarlogic
 
-.subckt para_register in out
-R1 out in 0.0001
-.ends para_register
-
-.model NMOS NMOS
-.model PMOS PMOS
 .lib C:\Users\jpa55\Documents\LTspiceXVII\lib\cmp\standard.mos
 .tran 0 13u 0 1n
 .model SW SW(Ron=0.1 Roff=1G Vt=.5 Vh=-.4)
+
+.include "6bit_SAR_test.meas"
 .meas tran reg1 find V(DOUT) AT=200n
 .param Trise=30p
 .param Td=Trise
@@ -98,7 +94,7 @@ R1 out in 0.0001
 *SINE(0.5 0.5 {fin} 0 0 90 0)
 .options plotwinsize = 0
 .options numdgt = 15
-.FOUR {fin} 5 -1 V(DOUT)
+*.FOUR {fin} 5 -1 V(DOUT)
 *.param fin = 991219.9375
 .param fin = 1Meg
 .backanno

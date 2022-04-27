@@ -1,0 +1,244 @@
+* C:\Users\jpa55\work\spice\saradc\saradc.asc
+C1 N004 N014 320f
+S1 N014 N015 SW5 0 SW
+S2 N014 0 SW5B 0 SW
+C2 N004 N013 160f
+S3 N013 N015 SW4 0 SW
+S4 N013 0 SW4B 0 SW
+C3 N004 N012 80f
+S5 N012 N015 SW3 0 SW
+S6 N012 0 SW3B 0 SW
+C4 N004 N011 40f
+S7 N011 N015 SW2 0 SW
+S8 N011 0 SW2B 0 SW
+C5 N004 N010 20f
+S9 N010 N015 SW1 0 SW
+S10 N010 0 SW1B 0 SW
+C6 N004 N009 10f
+S11 N009 N015 SW0 0 SW
+S12 N009 0 SW0B 0 SW
+C7 N004 N008 10f
+S13 N008 N015 Sample 0 SW
+S14 N008 0 COMP_ENB 0 SW
+S15 N015 N016 COMP_ENB 0 SW
+S16 N015 Vin Sample 0 SW
+V1 CLK 0 PULSE(0 {Vhigh} 0 30p 30p 5.55n 11.11n)
+V2 N016 0 {Vhigh}
+VIN Vin 0 SINE(0.5 0.5 {fin} 0 0 0 0)
+S17 0 N004 Sample 0 SW
+A1 CLK COMP_EN 0 0 0 N007 0 0 OR Trise={Trise} Td={Td} Vhigh={Vhigh}
+A2 COMP_EN 0 0 0 0 COMP_ENB 0 0 BUF Vt=.5 Vh=0.1 Trise={Trise} Vhigh={Vhigh}
+B1 DOUT 0 V=(32*V(Q05)+16*V(Q04)+8*V(Q03)+4*V(Q02)+2*V(Q01)+V(Q00))/63
+XX1 N007 N001 N005 N002 0 N006 N003 my_comparator
+V5 N001 0 1.8
+V6 N002 0 {common}
+V7 N005 N004 {common}
+XX2 CLK N003 CLR COMP_EN Q00 Q01 Q02 Q03 Q04 Q05 Sample SW0 SW0B SW1 SW1B SW2 SW2B SW3 SW3B SW4 SW4B SW5 SW5B mysarlogic
+
+* block symbol definitions
+.subckt my_comparator CLK VDD VINN VINP VSS VOUTN VOUTP
+M2 N047 N054 N057 N052 CMOSN l={L2} w={W2} m={M2}
+M3 N061 N072 N077 N066 CMOSN l={L3} w={W3} m={M3}
+M4 N023 N013 N007 N015 CMOSP l={L4} w={W4} m={M4}
+M5 N024 N014 N008 N016 CMOSP l={L5} w={W5} m={M5}
+M1 N046 N053 N055 N050 CMOSN l={L1} w={W1} m={M1}
+M6 N062 N073 N078 N068 CMOSN l={L6} w={W6} m={M6}
+M7 N063 N074 N079 N069 CMOSN l={L7} w={W7} m={M7}
+M8 N019 N034 N038 N027 CMOSN l={L8} w={W8} m={M8}
+M9 N040 N031 N028 N025 CMOSP l={L9} w={W9} m={M9}
+M10 N017 N004 N001 N009 CMOSP l={L10} w={W10} m={M10}
+M11 N065 N076 N081 N071 CMOSN l={L11} w={W11} m={M11}
+M12 N064 N075 N080 N070 CMOSN l={L12} w={W12} m={M12}
+M13 N022 N035 N039 N030 CMOSN l={L13} w={W13} m={M13}
+M14 N041 N033 N029 N026 CMOSP l={L14} w={W14} m={M14}
+M15 N018 N005 N002 N012 CMOSP l={L15} w={W15} m={M15}
+XX1 VDD N007 para_register
+XX2 VDD N015 para_register
+XX3 VDD N016 para_register
+XX4 VDD N008 para_register
+XX5 N013 CLK para_register
+XX6 CLK N014 para_register
+XX7 N036 N023 para_register
+XX8 N042 N024 para_register
+XX9 N046 N036 para_register
+XX10 N047 N042 para_register
+XX11 VINP N053 para_register
+XX12 N050 N051 para_register
+XX13 N051 N052 para_register
+XX14 N054 VINN para_register
+XX15 N055 N056 para_register
+XX16 N056 N057 para_register
+XX17 N056 N061 para_register
+XX18 N051 N067 para_register
+XX19 N072 CLK para_register
+XX20 N067 N066 para_register
+XX21 N077 VSS para_register
+XX22 N067 VSS para_register
+XX23 N036 N037 para_register
+XX24 N042 N043 para_register
+XX25 VDD N001 para_register
+XX26 VDD N010 para_register
+XX27 VDD N011 para_register
+XX28 VDD N002 para_register
+XX29 N003 N004 para_register
+XX30 N009 N010 para_register
+XX31 N017 N020 para_register
+XX32 N010 N025 para_register
+XX33 N020 N019 para_register
+XX34 N020 N028 para_register
+XX35 N003 N034 para_register
+XX36 N027 VSS para_register
+XX37 N038 VSS para_register
+XX38 N031 N032 para_register
+XX39 N073 N037 para_register
+XX40 N044 N040 para_register
+XX41 N048 N044 para_register
+XX42 N059 N048 para_register
+XX43 N062 N059 para_register
+XX44 N063 N059 para_register
+XX45 VSS N078 para_register
+XX46 VSS N068 para_register
+XX47 VSS N069 para_register
+XX48 VSS N079 para_register
+XX49 N074 N032 para_register
+XX50 N044 N045 para_register
+XX51 N032 N058 para_register
+XX52 VOUTP N048 para_register
+XX53 N011 N012 para_register
+XX54 N005 N006 para_register
+XX55 N011 N026 para_register
+XX56 N021 N022 para_register
+XX57 VSS N030 para_register
+XX58 VSS N039 para_register
+XX59 N035 N006 para_register
+XX60 N045 N033 para_register
+XX61 N049 N041 para_register
+XX62 N043 N006 para_register
+XX63 N075 N045 para_register
+XX64 N049 VOUTN para_register
+XX65 N049 N058 para_register
+XX66 N058 N060 para_register
+XX67 N043 N076 para_register
+XX68 N060 N064 para_register
+XX69 N060 N065 para_register
+XX70 N080 VSS para_register
+XX71 N070 VSS para_register
+XX72 N071 VSS para_register
+XX73 N081 VSS para_register
+XX74 N003 N037 para_register
+XX75 N018 N021 para_register
+XX76 N021 N029 para_register
+.param L = 0.18u
+.param L1 = L
+.param W1 = L1*10
+.param M1 = 1
+.param L2 = L
+.param W2 = L2*10
+.param M2 = 1
+.param L3 = L
+.param W3 = L3*10
+.param M3 = 1
+.param L4 = L
+.param W4 = L4*10
+.param M4 = 1
+.param L5 = L
+.param W5 = L5*10
+.param M5 = 1
+.param L6 = L
+.param W6 = L6*10
+.param M6 = 1
+.param L7 = L
+.param W7 = L7*10
+.param M7 = 1
+.param L8 = L
+.param W8 = L8*10
+.param M8 = 1
+.param L9 = L
+.param W9 = L9*10
+.param M9 = 1
+.param L10 = L
+.param W10 = L10*10
+.param M10 = 1
+.param L11 = L
+.param W11 = L11*10
+.param M11 = 1
+.param L12 = L
+.param W12 = L12*10
+.param M12 = 1
+.param L13 = L
+.param W13 = L13*10
+.param M13 = 1
+.param L14 = L
+.param W14 = L14*10
+.param M14 = 1
+.param L15 = L
+.param W15 = L15*10
+.param M15 = 1
+.include tsmc018.mdl
+.ends my_comparator
+
+.subckt mysarlogic CLK COMP_IN CLR COMP_EN Q00 Q01 Q02 Q03 Q04 Q05 Sample SW0 SW0B SW1 SW1B SW2 SW2B SW3 SW3B SW4 SW4B SW5 SW5B
+A1 TIHI 0 CLK 0 CLR N013 N020 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A10 0 TIHI 0 N013 0 0 Sample 0 AND Trise={Trise} Td={Td} Vhigh={Vhigh}
+A30 Sample D6 N001 0 0 SW5B SW5 0 OR Trise={Trise} Td={Td} Vhigh={Vhigh}
+V1 TIHI 0 {Vhigh}
+A36 CLK 0 0 0 0 N028 0 0 BUF Trise={Trise} Vhigh={Vhigh}
+A2 N020 0 CLK 0 N027 COMP_EN N021 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A3 N021 0 CLK 0 CLR N014 N022 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A4 N022 0 CLK 0 CLR N015 N023 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A5 N023 0 CLK 0 CLR N016 N024 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A6 N024 0 CLK 0 CLR N017 N025 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A7 N025 0 CLK 0 CLR N018 N026 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A8 N026 0 CLK 0 CLR N019 N027 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A9 N027 0 N028 0 0 0 CLR 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A18 COMP_IN 0 N007 0 Sample 0 N001 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A19 COMP_IN 0 N008 0 Sample 0 N002 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A20 COMP_IN 0 N009 0 Sample 0 N003 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A21 COMP_IN 0 N010 0 Sample 0 N004 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A22 COMP_IN 0 N011 0 Sample 0 N005 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A23 COMP_IN 0 N012 0 Sample 0 N006 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A24 N001 0 CLR 0 0 0 Q05 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A25 N002 0 CLR 0 0 0 Q04 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A26 N003 0 CLR 0 0 0 Q03 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A27 N004 0 CLR 0 0 0 Q02 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A28 N005 0 CLR 0 0 0 Q01 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A29 N006 0 CLR 0 0 0 Q00 0 DFLOP Vhigh={Vhigh} Vlow={Vlow} Td={Td} Trise={Trise}
+A11 0 N020 0 COMP_EN 0 0 N0V 0 AND Trise={Trise} Td={Td} Vhigh={Vhigh}
+A12 0 N021 0 N014 0 N007 D6 0 AND Trise={Trise} Td={Td} Vhigh={Vhigh}
+A13 0 N022 0 N015 0 N008 D5 0 AND Trise={Trise} Td={Td} Vhigh={Vhigh}
+A14 0 N023 0 N016 0 N009 D4 0 AND Trise={Trise} Td={Td} Vhigh={Vhigh}
+A15 0 N024 0 N017 0 N010 D3 0 AND Trise={Trise} Td={Td} Vhigh={Vhigh}
+A16 0 N025 0 N018 0 N011 D2 0 AND Trise={Trise} Td={Td} Vhigh={Vhigh}
+A17 0 N026 0 N019 0 N012 D1 0 AND Trise={Trise} Td={Td} Vhigh={Vhigh}
+A31 Sample D5 N002 0 0 SW4B SW4 0 OR Trise={Trise} Td={Td} Vhigh={Vhigh}
+A32 Sample D4 N003 0 0 SW3B SW3 0 OR Trise={Trise} Td={Td} Vhigh={Vhigh}
+A33 Sample D3 N004 0 0 SW2B SW2 0 OR Trise={Trise} Td={Td} Vhigh={Vhigh}
+A34 Sample D2 N005 0 0 SW1B SW1 0 OR Trise={Trise} Td={Td} Vhigh={Vhigh}
+A35 Sample D1 N006 0 0 SW0B SW0 0 OR Trise={Trise} Td={Td} Vhigh={Vhigh}
+.ends mysarlogic
+
+.subckt para_register in out
+R1 out in 0.0001
+.ends para_register
+
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\jpa55\Documents\LTspiceXVII\lib\cmp\standard.mos
+.tran 0 10u 0 1n
+.model SW SW(Ron=0.1 Roff=1G Vt=.5 Vh=-.4)
+.meas tran reg1 find V(DOUT) AT=200n
+.param Trise=30p
+.param Td=Trise
+.param Vhigh=1
+.param Vlow=0
+*PULSE(0 {Vhigh} 0 12.8u 0 0.2u 13u)
+.param common = 0.9
+*SINE(0.5 0.5 {fin} 0 0 90 0)
+.options plotwinsize = 0
+.options numdgt = 15
+.FOUR {fin} 5 -1 V(DOUT)
+*.param fin = 991219.9375
+.param fin = 200k
+.include "6bit_SAR_test.meas"
+.backanno
+.end
