@@ -1,0 +1,57 @@
+* C:\Users\circuit\spice\saradc\module\Draft1.asc
+M1 N013 N005 N001 N009 cmosp l=0.13u w=1u m=8
+M2 P001 N006 N002 N010 cmosp l=0.13u w=1u m=12
+M3 P002 N007 N003 N011 cmosp l=0.13u w=1u m=12
+M4 N018 N008 N004 N012 cmosp l=0.13u w=1u m=8
+M5 N019 N023 N025 N021 cmosn l=0.13u w=1u m=8
+M6 N020 N024 N026 N022 cmosn l=0.13u w=1u m=8
+M7 N027 N031 N033 N029 cmosn l=0.13u w=1u m=12
+M8 N028 N032 N034 N030 cmosn l=0.13u w=1u m=12
+M9 N036 N038 P003 N037 cmosn l=0.13u w=1u m=12
+XX1 vdd N001 para_res
+XX2 vdd N009 para_res
+XX3 vdd N010 para_res
+XX4 vdd N002 para_res
+XX5 vdd N003 para_res
+XX6 vdd N011 para_res
+XX7 vdd N012 para_res
+XX8 vdd N004 para_res
+XX9 N005 clk para_res
+XX10 clk N008 para_res
+XX11 N014 N013 para_res
+XX12 N018 N017 para_res
+XX13 N015 N006 para_res
+XX14 N014 P001 para_res
+XX15 N016 N007 para_res
+XX16 N015 P002 para_res
+XX17 N023 N015 para_res
+XX18 N024 N016 para_res
+XX19 N017 N015 para_res
+XX20 N016 N014 para_res
+XX21 N019 N016 para_res
+XX22 N020 N017 para_res
+XX23 vss N021 para_res
+XX24 N027 N025 para_res
+XX25 N028 N026 para_res
+XX26 vss N022 para_res
+XX27 inn N031 para_res
+XX28 N032 inp para_res
+XX29 N033 N035 para_res
+XX30 N029 vss para_res
+XX31 N030 vss para_res
+XX32 N034 N035 para_res
+XX33 N035 N036 para_res
+XX34 N038 clk para_res
+XX35 vss P003 para_res
+XX36 vss N037 para_res
+
+* block symbol definitions
+.subckt para_res s g
+R1 s g 1
+.ends para_res
+
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\circuit\Documents\LTspiceXVII\lib\cmp\standard.mos
+.backanno
+.end
