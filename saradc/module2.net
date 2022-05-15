@@ -1,60 +1,60 @@
 * C:\Users\jpa55\work\spice\saradc\module2.asc
-M1 N038 N046 N050 N042 CMOSN l={L6} w={W6} m={M6}
-M2 N039 N047 N051 N043 CMOSN l={L7} w={W7} m={M7}
-M3 N014 N027 N029 N020 CMOSN l={L8} w={W8} m={M8}
-M4 N031 N024 N021 N018 CMOSP l={L9} w={W9} m={M9}
-M5 N012 N005 N002 N008 CMOSP l={L10} w={W10} m={M10}
-M6 N041 N049 N053 N045 CMOSN l={L11} w={W11} m={M11}
-M7 N040 N048 N052 N044 CMOSN l={L12} w={W12} m={M12}
-M8 N017 N028 N030 N023 CMOSN l={L13} w={W13} m={M13}
-M9 N032 N026 N022 N019 CMOSP l={L14} w={W14} m={M14}
-M10 N013 N006 N003 N011 CMOSP l={L15} w={W15} m={M15}
-XX1 N001 N002 para_register
-XX2 N001 N009 para_register
-XX3 N001 N010 para_register
-XX4 N001 N003 para_register
-XX5 N004 N005 para_register
-XX6 N008 N009 para_register
-XX7 N012 N015 para_register
-XX8 N009 N018 para_register
-XX9 N015 N014 para_register
-XX10 N015 N021 para_register
-XX11 N004 N027 para_register
-XX12 N020 VSS para_register
-XX13 N029 VSS para_register
-XX14 N024 N025 para_register
-XX15 N033 N031 para_register
-XX16 N036 N033 para_register
-XX17 N038 N036 para_register
-XX18 N039 N036 para_register
-XX19 N054 N050 para_register
-XX20 N054 N042 para_register
-XX21 N054 N043 para_register
-XX22 N054 N051 para_register
-XX23 N047 N025 para_register
-XX24 N033 N034 para_register
-XX25 N025 N035 para_register
-XX26 N010 N011 para_register
-XX27 N006 N007 para_register
-XX28 N010 N019 para_register
-XX29 N016 N017 para_register
-XX30 VSS N023 para_register
-XX31 VSS N030 para_register
-XX32 N028 N007 para_register
-XX33 N034 N026 para_register
-XX34 N035 N032 para_register
-XX35 N049 N007 para_register
-XX36 N048 N034 para_register
-XX37 N035 N037 para_register
-XX38 N037 N040 para_register
-XX39 N037 N041 para_register
-XX40 N052 N054 para_register
-XX41 N044 N054 para_register
-XX42 N045 N054 para_register
-XX43 N053 N054 para_register
-XX44 N004 N046 para_register
-XX45 N013 N016 para_register
-XX46 N016 N022 para_register
+M1 N037 N045 N049 N041 CMOSN l={L6} w={W6} m={M6}
+M2 N038 N046 N050 N042 CMOSN l={L7} w={W7} m={M7}
+M3 N013 N026 N028 N019 CMOSN l={L8} w={W8} m={M8}
+M4 N030 N023 N020 N017 CMOSP l={L9} w={W9} m={M9}
+M5 N011 N004 N001 N007 CMOSP l={L10} w={W10} m={M10}
+M6 N040 N048 N052 N044 CMOSN l={L11} w={W11} m={M11}
+M7 N039 N047 N051 N043 CMOSN l={L12} w={W12} m={M12}
+M8 N016 N027 N029 N022 CMOSN l={L13} w={W13} m={M13}
+M9 N031 N025 N021 N018 CMOSP l={L14} w={W14} m={M14}
+M10 N012 N005 N002 N010 CMOSP l={L15} w={W15} m={M15}
+XX1 VDD N001 para_register
+XX2 VDD N008 para_register
+XX3 VDD N009 para_register
+XX4 VDD N002 para_register
+XX5 N003 N004 para_register
+XX6 N007 N008 para_register
+XX7 N011 N014 para_register
+XX8 N008 N017 para_register
+XX9 N014 N013 para_register
+XX10 N014 N020 para_register
+XX11 N003 N026 para_register
+XX12 N019 VSS para_register
+XX13 N028 VSS para_register
+XX14 N023 N024 para_register
+XX15 N032 N030 para_register
+XX16 N035 N032 para_register
+XX17 N037 N035 para_register
+XX18 N038 N035 para_register
+XX19 VSS N049 para_register
+XX20 VSS N041 para_register
+XX21 VSS N042 para_register
+XX22 VSS N050 para_register
+XX23 N046 N024 para_register
+XX24 N032 N033 para_register
+XX25 N024 N034 para_register
+XX26 N009 N010 para_register
+XX27 N005 N006 para_register
+XX28 N009 N018 para_register
+XX29 N015 N016 para_register
+XX30 VSS N022 para_register
+XX31 VSS N029 para_register
+XX32 N027 N006 para_register
+XX33 N033 N025 para_register
+XX34 N034 N031 para_register
+XX35 N048 N006 para_register
+XX36 N047 N033 para_register
+XX37 N034 N036 para_register
+XX38 N036 N039 para_register
+XX39 N036 N040 para_register
+XX40 N051 VSS para_register
+XX41 N043 VSS para_register
+XX42 N044 VSS para_register
+XX43 N052 VSS para_register
+XX44 N003 N045 para_register
+XX45 N012 N015 para_register
+XX46 N015 N021 para_register
 
 * block symbol definitions
 .subckt para_register in out
