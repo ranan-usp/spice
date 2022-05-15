@@ -1,0 +1,39 @@
+* C:\Users\jpa55\work\spice\saradc\module1.asc
+M1 N012 N017 N020 N015 CMOSN l={L2} w={W2} m={M2}
+M2 N021 N024 N025 N022 CMOSN l={L3} w={W3} m={M3}
+M3 N007 N003 N001 N005 CMOSP l={L4} w={W4} m={M4}
+M4 N008 N004 N002 N006 CMOSP l={L5} w={W5} m={M5}
+M5 N011 N016 N018 N013 CMOSN l={L1} w={W1} m={M1}
+XX1 VDD N001 para_register
+XX2 VDD N005 para_register
+XX3 VDD N006 para_register
+XX4 VDD N002 para_register
+XX5 N003 CLK para_register
+XX6 CLK N004 para_register
+XX7 N009 N007 para_register
+XX8 N010 N008 para_register
+XX9 N011 N009 para_register
+XX10 N012 N010 para_register
+XX11 VINP N016 para_register
+XX12 N013 N014 para_register
+XX13 N014 N015 para_register
+XX14 N017 VINN para_register
+XX15 N018 N019 para_register
+XX16 N019 N020 para_register
+XX17 N019 N021 para_register
+XX18 N014 N023 para_register
+XX19 N024 CLK para_register
+XX20 N023 N022 para_register
+XX21 N025 VSS para_register
+XX22 N023 VSS para_register
+
+* block symbol definitions
+.subckt para_register in out
+R1 out in 0.0001
+.ends para_register
+
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\jpa55\Documents\LTspiceXVII\lib\cmp\standard.mos
+.backanno
+.end
